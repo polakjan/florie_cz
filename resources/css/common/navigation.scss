@@ -1,0 +1,19 @@
+.navigation {
+    display: flex;
+
+    &__item {
+        font-family: $fellFont;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-size: 1.25rem;
+        font-weight: normal;
+        font-style: normal;
+        padding: 0 0.5em;
+
+        &--active,
+        &:hover {
+            color: $highlightColor;
+        }
+    }
+}

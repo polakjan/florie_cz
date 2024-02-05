@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100;200;400;600;900&family=Quicksand:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+@font-face {
+    font-family: 'IM FELL English SC';
+    src: url('/font/IM_FELL_English_SC.eot');
+    src:
+        url('/font/IM_FELL_English_SC.eot?#iefix') format('embedded-opentype'),
+        url('/font/IM_FELL_English_SC.woff2') format('woff2'),
+        url('/font/IM_FELL_English_SC.woff') format('woff'),
+        url('/font/IM_FELL_English_SC.ttf') format('truetype'),
+        url('/font/IM_FELL_English_SC.svg#IM_FELL_English_SC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+$onestFont: 'Onest', sans-serif;
+$quickSandFont:  'Quicksand', sans-serif;
+$barlowFont: 'Barlow', Arial, Helvetica, sans-serif;
+$openSansFont: 'Open Sans', Arial, Helvetica, sans-serif;
+$fellFont: 'IM Fell English SC', serif;

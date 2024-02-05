@@ -1,0 +1,18 @@
+// variables
+@import 'variables/colors.scss';
+@import 'variables/sizes.scss';
+
+// fonts
+@import 'fonts/google-fonts.scss';
+@import 'fonts/fontello.scss';
+
+// common
+@import 'common/general.scss';
+@import 'common/document.scss';
+@import 'common/header.scss';
+@import 'common/navigation.scss';
+@import 'common/main.scss';
+
+// pages
+@import 'pages/homepage.scss';
+@import 'pages/story.scss';

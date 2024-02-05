@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $fellFont;
+    margin-bottom: 0.375em;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+a {
+    color: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+em,
+.em {
+    color: $highlightColor;
+
+    @at-root body.light-theme & {
+        color: orangered;
+        font-weight: 600;
+        // text-shadow: 0px 0px 1px black;
+    }
+}
+
+.tac {
+    text-align: center;
+}

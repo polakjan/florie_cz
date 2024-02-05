@@ -1,0 +1,32 @@
+.main {
+    font-size: 1.25em;
+    align-self: center;
+    width: $mainMaxWidth;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $mainMaxWidth) {
+        width: 100%;
+    }
+
+    &__section {
+        background-color: #00000099;
+        box-shadow: 0px 0px 16px 0px #dddddd22;
+        margin: 2em;
+        padding: 1.5em 1.5em;
+
+        @at-root body.light-theme & {
+            background-color: #ffffffdd;
+            color: black;
+            box-shadow: 0px 0px 16px 0px #33333322;
+        }
+
+        > p {
+            margin-bottom: 1em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

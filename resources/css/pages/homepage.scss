@@ -1,0 +1,16 @@
+.homepage {
+
+    &__welcome {
+        position: relative;
+    }
+
+    &__section-seal {
+        position: absolute;
+        right: -1em;
+        bottom: -1em;
+
+        img {
+            height: 6em;
+        }
+    }
+}
