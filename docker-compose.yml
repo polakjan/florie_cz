@@ -6,32 +6,12 @@ services:
     restart: always
     ports:
       - "80:80"
-      - "443:443"
     volumes:
       - "/etc/nginx/vhost.d"
       - "/usr/share/nginx/html"
       - "/var/run/docker.sock:/tmp/docker.sock:ro"
       - "/etc/nginx/certs"
-  letsencrypt-nginx-proxy-companion:
-    container_name: letsencrypt-nginx-proxy-companion
-    image: jrcs/letsencrypt-nginx-proxy-companion
-    restart: always
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock:ro"
-    volumes_from:
-      - "nginx-proxy"
-  app1:
-    image: florie_cz
+  florie_cz:
+    image: florie_cz:latest
     environment:
-      - VIRTUAL_HOST=florie.local
-      # - LETSENCRYPT_HOST=app1.mysite.com
-  # app2:
-  #   image: keymetrics/pm2
-  #   environment:
-  #     - VIRTUAL_HOST=app2.mysite.com
-  #     - LETSENCRYPT_HOST=app2.mysite.com
-  # app3:
-  #   image: tomcat
-  #   environment:
-  #     - VIRTUAL_HOST=app3.mysite.com
-  #     - LETSENCRYPT_HOST=app3.mysite.com
+      - VIRTUAL_HOST=florie.local,www.florie.local
