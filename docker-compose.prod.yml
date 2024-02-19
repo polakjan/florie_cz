@@ -13,6 +13,7 @@ services:
       - "/var/run/docker.sock:/tmp/docker.sock:ro"
       - "/etc/nginx/certs"
       - "/home/nginx-proxy-custom-settings.conf:/etc/nginx/conf.d/my_custom_proxy_settings.conf"
+
   letsencrypt-nginx-proxy-companion:
     container_name: letsencrypt-nginx-proxy-companion
     image: jrcs/letsencrypt-nginx-proxy-companion
@@ -21,11 +22,30 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
     volumes_from:
       - "nginx-proxy"
+
   florie_cz:
     image: registry.janpolak.eu/florie_cz:latest
     environment:
       - VIRTUAL_HOST=florie.cz,www.florie.cz
       - LETSENCRYPT_HOST=florie.cz,www.florie.cz
+
+  mariadb:
+    container_name: "mariadb"
+    image: mariadb:10.7.1
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 1
+      TZ: Europe/Prague
+    volumes:
+      - ./docker/mariadb/init:/docker-entrypoint-initdb.d:rw
+      - ../data/mysql:/var/lib/mysql:delegated
+    networks:
+      default:
+        aliases:
+          - mariadb
 
 networks:
     default:
