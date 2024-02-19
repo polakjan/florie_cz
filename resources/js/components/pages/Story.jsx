@@ -3,6 +3,8 @@ export default function Story() {
     return (
         <div className="page page--story story">
 
+            <h1 className="page__headline">Příběh</h1>
+
             <div className="main__section">
 
                 <p>

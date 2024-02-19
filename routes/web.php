@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,5 +13,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('app/{path?}', [AppController::class, 'app'])->where('path', '.*');
 
 Route::view('{path?}', 'app')->where('path', '.*')->name('app');

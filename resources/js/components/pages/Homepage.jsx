@@ -3,6 +3,8 @@ export default function Homepage() {
     return (
         <div className="page page--homepage homepage">
 
+            <h1 className="page__headline">Florie: <span className="em">Navzdory</span></h1>
+
             <div className="main__section homepage__welcome" style={ { textAlign: 'center', padding: '3em 1.5em' } }>
 
                 <p className="em" style={ { fontSize: '1.25em' } }>
