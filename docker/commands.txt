@@ -1,0 +1,5 @@
+docker build -t florie_cz:latest .
+docker-compose up --force-recreate --build -d --remove-orphan
+docker exec -it 5ce620d77b8d798f3c3631a96842022beac14e395bbe75c98532f38d0aa1977b /bin/bash
+docker tag florie_cz:latest registry.janpolak.eu/florie_cz:latest
+docker push registry.janpolak.eu/florie_cz:latest
